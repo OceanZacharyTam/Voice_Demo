@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceDemo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Voice Clone for Mandarin and Cantonese</h1>
+    <p class="name">by Tam U Hoi, Ocean</p>
+    <h2>Objective</h2>
+    <li>
+        Implement voice cloning for Mandarin and Cantonese by Neural Network based on 
+        <a href="https://github.com/CorentinJ/Real-Time-Voice-Cloning" target="_black">Real time voice cloning</a> and 
+        <a href="https://arxiv.org/abs/1806.04558" target="_black">SV2TTS2</a>.
+    </li>
+    
+    <br>
+
+    <h2>Basic Structure</h2>
+    <li>A three-stage pipeline</li>
+    <li><b style='color:#249C48'>Speaker encoder</b> for extracting speaker characteristics.</li>
+    <li><b style='color:#3E85C6'>Synthesizer</b> for generating mel-spectrogran from text.</li>
+    <li><b style='color:#EF4154'>Vocoder</b> for generating the waveform form mel-spectrogran.</li>
+    <img class="img-chart" src="./Photo/three-stage pipeline-43.png" alt="">
+    <br>
+    <h2>Voice Cloning on Mandarin</h2>
+    <li>We have achieved voice cloning on Mandarin</li>
+
+    <div class="demo-panel">
+        <div class="img-container">
+            <div class="img-container-div">Someone in training set</div>
+            <img class="img-people" src="./Photo/ma.jpg" alt="">
+            <img class="img-people" src="./Photo/an.jpg" alt="">
+            <img class="img-people" src="./Photo/CCTV_girl.jpg" alt="">
+        </div>
+        <div class="container vo-container">
+            <div class="vo">Sample</div>
+            <div class="vo">漢語拼音</div>
+            <div class="vo">今天天氣很好</div>
+            <div class="vo">澳門每人發十萬塊吧</div>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleMandarin/aidatatang_200zh_GIrl.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/aidatatang_200zh_GIrl_1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/aidatatang_200zh_GIrl_2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/aidatatang_200zh_GIrl_3.wav" controls></audio>
+
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleMandarin/jack-ma-sample4.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/jack-ma-m1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/jack-ma-m2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/jack-ma-m3.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleMandarin/SieAnn_sample.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/SieAnn_1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/SieAnn_2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/SieAnn_3.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleMandarin/CCTV_GIRL.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/CCTV_GIRL_1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/CCTV_GIRL_2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleMandarin/CCTV_GIRL_3.wav" controls></audio>
+        </div>
+    </div>
+
+    <div><br><br></div>
+
+    <h2>Voice Cloning on Cantonese</h2>
+    <li>The Cantonese models can not cloning an unseen speaker very well</li>
+    <li>The possible reason is that the diversity of the data set is relatively limited</li>
+    <div><br></div>
+    <div class="demo-panel">
+        <div class="img-container">
+            <div class="img-container-div">Someone in training set</div>
+            <img class="img-people" src="./Photo/ma.jpg" alt="">
+            <img class="img-people" src="./Photo/an.jpg" alt="">
+            <img class="img-people" src="./Photo/wu.png" alt="">
+        </div>
+        <div class="container vo-container">
+            <div class="vo">Sample</div>
+            <div class="vo">廣東話拼音</div>
+            <div class="vo">今日天氣好好</div>
+            <div class="vo">我坐巴士返學</div>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleCanton/canton/commVoice_Boy_01.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/commVoice_Boy_1_01.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/commVoice_Boy_2_01.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/commVoice_Boy_3_01.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleCanton/canton/jack-ma-sample4.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/jack-ma-c1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/jack-ma-c2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/jack-ma-c3.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleCanton/canton/SieAnn_sample_01.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/SieAnn_1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/SieAnn_2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/SieAnn_3.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./VoiceSampleCanton/canton/wu.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/wu_1.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/wu_2.wav" controls></audio>
+            <audio class="audio" src="./VoiceSampleCanton/canton/wu_3.wav" controls></audio>
+        </div>
+    </div>
+    <div><br><br></div>
+
+    <h2>Cross-language Synthesis</h2>
+    <li>We tried to synthesize Mandarin with the model of Cantonese, and synthesize Cantonese with the model of Mandarin.</li>
+    <div><br></div>
+    <div class="demo-panel">
+        <div class="corssLanguage-img-container">
+            <div class="img-container-div">Mandarin synthesize by Cantonese model</div>
+            <div class="img-container-div">Cantonese synthesize by Mandarin model</div>
+        </div>
+        <div class="container vo-container">
+            <div class="vo">廣東話好難講呀</div>
+            <div class="vo">今日天氣好好</div>
+            <div class="vo">我坐巴士返學</div>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./C2M/commVoice_Boy_4_01.wav" controls></audio>
+            <audio class="audio" src="./C2M/commVoice_Boy_5_01.wav" controls></audio>
+            <audio class="audio" src="./C2M/commVoice_Boy_6_01.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./C2M/wu_4.wav" controls></audio>
+            <audio class="audio" src="./C2M/wu_5.wav" controls></audio>
+            <audio class="audio" src="./C2M/wu_6.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./M2C/CCTV_GIRL_4.wav" controls></audio>
+            <audio class="audio" src="./M2C/CCTV_GIRL_5.wav" controls></audio>
+            <audio class="audio" src="./M2C/CCTV_GIRL_6.wav" controls></audio>
+        </div>
+        <div class="container audio-container">
+            <audio class="audio" src="./M2C/xi_4.wav" controls></audio>
+            <audio class="audio" src="./M2C/xi_5.wav" controls></audio>
+            <audio class="audio" src="./M2C/xi_6.wav" controls></audio>
+        </div>
+    </div>
+</body>
+</html>
